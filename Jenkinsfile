@@ -23,7 +23,10 @@ pipeline {
 	stages {
 		stage('Git Pull') {
 		    steps {
+			    script{
+					cleanWs()
 					git GIT_URL
+			    }
 		    }
 		}
 		stage('Is the run required?') {
@@ -112,7 +115,7 @@ pipeline {
     }
 	post {
 	  success {
-		script{
+		script {
     	      try{
     	          echo "sending Email to : ${Success_Email} ...."
     	      }catch(Exception ex){
@@ -121,16 +124,13 @@ pipeline {
 	      }
 	  }
 	  failure {
-		script{
+		script {
     		try{
     	          echo "sending Email to : ${Failure_Email} ...."
     	      }catch(Exception ex){
     	          echo "Couldnt send the email ...."
     	      }
     	 }
-	  }
-	  always {
-	      cleanWs()
 	  }
 	}
 }
