@@ -1,0 +1,24 @@
+{
+  "files": [
+  {
+    "name": "file1",
+    "content": "this is first file"
+  },
+  {
+    "name": "file2",
+    "content": "this is second file"
+  },
+  {
+    "name": "file3",
+    "content": "this is third file"
+  },
+  {
+    "name": "file4",
+    "content": "this is fourth file"
+  },
+  {
+    "name": "file5",
+    "content": "this is fifth file"
+  }
+]
+}
