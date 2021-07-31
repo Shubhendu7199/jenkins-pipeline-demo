@@ -20,22 +20,22 @@ pipeline {
 		string defaultValue: 'success@test.com', name: 'Success_Email'
 		string defaultValue: 'failure@test.com', name: 'Failure_Email'
 	}
-    stages {
-        stage('Git Pull') {
-            steps {
-				git GIT_URL
-            }
-        }
+	stages {
+		stage('Git Pull') {
+		    steps {
+					git GIT_URL
+		    }
+		}
 		stage('Is the run required?') {
 			options {
-			  retry(3)
+				retry(3)
 			}
-            steps {
-                script {
+		    steps {
+				script {
 					IS_TODAY_HOLIDAY = getHoliday()
 				}
-            }
-        }
+			}
+		}
 		stage('Build') {
 			when {
 				expression { IS_TODAY_HOLIDAY == false } 
@@ -44,7 +44,7 @@ pipeline {
 				script {
 					files = build(BUILD_FILE_PATH,ZIP_FILE_NAME)
 				}
-            }
+           	}
         }
 		stage('Parallel Stages') {
 			when {
