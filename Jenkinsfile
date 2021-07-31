@@ -6,9 +6,10 @@ def summary = []
 def files = []
 
 pipeline {
+    /** The agent should be changed based on the Jenkins instance. **/
     agent { label 'master' }
 	environment {
-		GIT_URL = "https://github.com/kunalkumar229/jenkins-pipeline-demo"
+		GIT_URL = "https://github.com/kunalkumar229/jenkins-pipeline-demo" // Git repository should contain build.json file.
 		BUILD_FILE_PATH = "build.json"
 		ZIP_FILE_NAME = "builds.zip"
 		IS_TODAY_HOLIDAY = false
