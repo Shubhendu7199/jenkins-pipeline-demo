@@ -1,15 +1,15 @@
 # Declarative pipeline for Demo
 
-# Prerequisites
-
-## Plugins required :- 
+# Prerequisites ---- >
+## Install below plugins :- 
 1. git -> for git checkout.
 2. Http Requests -> for REST Api call.
 3. Pipeline Utility Steps -> For reading JSON file(readJSON), zip files(zip) and unzip files(unzip).
 4. Blue Ocean -> for visualization.
 
 ## Note -> This pipeline can run on both linux & windows agent.
-## How to run :-
+
+# How to run ---- >
 
 1. Create a pipeline item in Jenkins
 
