@@ -8,7 +8,7 @@ def files = []
 pipeline {
     agent { label 'master' }
 	environment {
-		GIT_URL = "https://github.com/kunalkumar229/android"
+		GIT_URL = "https://github.com/kunalkumar229/jenkins-pipeline-demo"
 		BUILD_FILE_PATH = "build.json"
 		ZIP_FILE_NAME = "builds.zip"
 		IS_TODAY_HOLIDAY = false
